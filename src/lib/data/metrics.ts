@@ -1,26 +1,39 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { ProductivityMetrics } from '@/types/metrics';
+import { MetricPoint } from '@/types/metrics';
 
-const DATA_PATH = path.join(process.cwd(), 'data', 'metrics.json');
+const METRICS_FILE_PATH = path.join(process.cwd(), 'data', 'metrics.json');
 
-export async function getMetrics(): Promise<ProductivityMetrics> {
+interface MetricsData {
+  cycleTime: MetricPoint[];
+  leadTime: MetricPoint[];
+}
+
+export async function getMetrics(): Promise<MetricsData> {
   try {
-    const data = await fs.readFile(DATA_PATH, 'utf8');
+    const data = await fs.readFile(METRICS_FILE_PATH, 'utf8');
     return JSON.parse(data);
-  } catch {
-    // Return default metrics if file doesn't exist
-    return {
-      cycleTime: [],
-      leadTime: [],
-      changeFailureRate: [],
-      timeToRestore: [],
-      workDistribution: [],
-    };
+  } catch (error) {
+    console.error('Error reading metrics:', error);
+    throw new Error('Could not read metrics');
   }
 }
 
-export async function saveMetrics(metrics: ProductivityMetrics): Promise<void> {
-  await fs.mkdir(path.dirname(DATA_PATH), { recursive: true });
-  await fs.writeFile(DATA_PATH, JSON.stringify(metrics, null, 2));
+export async function saveMetrics(metrics: MetricsData): Promise<void> {
+  try {
+    await fs.writeFile(METRICS_FILE_PATH, JSON.stringify(metrics, null, 2));
+  } catch (error) {
+    console.error('Error saving metrics:', error);
+    throw new Error('Could not save metrics');
+  }
+}
+
+export async function getCycleTimeMetrics(): Promise<MetricPoint[]> {
+  const data = await getMetrics();
+  return data.cycleTime;
+}
+
+export async function getLeadTimeMetrics(): Promise<MetricPoint[]> {
+  const data = await getMetrics();
+  return data.leadTime;
 }
