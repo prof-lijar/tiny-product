@@ -1,27 +1,21 @@
-# Product Vision
+# Vision Document
 
-## Title: Developer's Portfolio Generator App
+## Product Idea
+We aim to build a Personal Portfolio Website using Next.js. This project will serve as an introduction to the Next.js ecosystem, helping us understand fundamental concepts like file-based routing, creating reusable layout components, and optimizing performance.
 
-### Target Users:
-- Developers looking to create a professional online presence to showcase projects, skills, and experiences.
-- Freelance developers seeking an easy-to-customize portfolio website.
-- Students or recent graduates aiming to build a polished portfolio for job applications.
+## Target Users
+This portfolio website is targeted at developers who want to showcase their professional skills, past projects, and contact information in a fast, user-friendly manner. Potential employers will use this platform to evaluate candidates' abilities and previous work.
 
-### Value Proposition:
-The Developer's Portfolio Generator App offers a modern, dynamic, and responsive platform that helps developers create professional portfolios with minimal effort. Users can easily showcase their projects, write technical case studies, and manage their resumes in one place. With support for dark and light modes, the app caters to diverse preferences and ensures a great user experience across devices.
+## Value Proposition
+- **Blazing-Fast Performance**: Our website will leverage Next.js's built-in features for performance optimization, ensuring quick load times.
+- **SEO-Friendly**: The site will be optimized for search engines, making it easier for potential employers to find.
+- **Responsive Design**: The portfolio will look great on all devices, from desktop computers to smartphones.
+- **Interactive Elements**: We will integrate smooth animations and hover effects using Framer Motion to enhance the user experience.
 
-## Key Features:
-- **User Authentication (Optional)**: Allow users to personalize their portfolios with secure login options.
-- **Project Management**: Enable users to add, update, or delete projects with ease.
-- **Blog Section**: Provide a space for developers to write articles or technical case studies.
-- **About/Resume/CV Page**: Offer an area to showcase personal information and professional details.
-- **Contact Form**: Integrate a contact form for potential clients or collaborators to reach out.
-- **Responsive Design**: Ensure the app is accessible and visually appealing on all devices, from desktops to mobile phones.
-- **Dark and Light Mode Support**: Cater to diverse preferences with customizable themes.
-
-## Technical Stack:
-- **Next.js**: Utilize Next.js for server-side rendering (SSR) to improve performance and SEO.
-- **TypeScript**: Implement TypeScript to enhance type safety and maintainability.
-- **Tailwind CSS**: Use Tailwind CSS for efficient and consistent styling.
-- **Framer Motion**: Incorporate Framer Motion for smooth animations (optional).
-- **Vercel**: Deploy the app using Vercel for seamless hosting and scalability.
+## Next Steps
+1. Create a new issue for building the personal portfolio website.
+2. Initialize the Next.js project with the necessary configurations.
+3. Develop the individual pages (Home, About Me, Portfolio/Projects, Contact).
+4. Style the interface using Tailwind CSS and add animations with Framer Motion.
+5. Implement a contact form to capture user input.
+6. Ensure all pages load quickly and are mobile-friendly.
