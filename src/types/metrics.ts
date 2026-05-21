@@ -14,7 +14,13 @@ export interface MetricsResponse {
   error?: string;
 }
 
+export interface WorkDistributionData {
+  category: string;
+  value: number;
+  color: string;
+}
+
 export interface WorkDistributionResponse {
-  data: WorkDistribution;
+  data: WorkDistributionData[];
   error?: string;
 }
