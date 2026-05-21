@@ -35,12 +35,14 @@ interface DashboardMetrics {
     unit: string;
     trend: { value: string; isPositive: boolean };
     description: string;
+    history: MetricData[];
   };
   timeToRestore: {
     current: string;
     unit: string;
     trend: { value: string; isPositive: boolean };
     description: string;
+    history: MetricData[];
   };
 }
 
@@ -82,20 +84,26 @@ export const DashboardClient = () => {
   const fetchMetrics = async () => {
     setLoading(true);
     try {
-      const [cycleRes, leadRes] = await Promise.all([
+      const [cycleRes, leadRes, failureRes, restoreRes] = await Promise.all([
         fetch('/api/metrics/cycle-time'),
         fetch('/api/metrics/lead-time'),
+        fetch('/api/metrics/change-failure-rate'),
+        fetch('/api/metrics/time-to-restore'),
       ]);
 
-      if (!cycleRes.ok || !leadRes.ok) {
+      if (!cycleRes.ok || !leadRes.ok || !failureRes.ok || !restoreRes.ok) {
         throw new Error('Failed to fetch metrics data');
       }
 
       const cycleResponse = await cycleRes.json();
       const leadResponse = await leadRes.json();
+      const failureResponse = await failureRes.json();
+      const restoreResponse = await restoreRes.json();
 
       const cycleSummary = calculateMetricSummary(cycleResponse.data || []);
       const leadSummary = calculateMetricSummary(leadResponse.data || []);
+      const failureSummary = calculateMetricSummary(failureResponse.data || []);
+      const restoreSummary = calculateMetricSummary(restoreResponse.data || []);
 
       setMetrics({
         cycleTime: {
@@ -113,16 +121,18 @@ export const DashboardClient = () => {
           history: leadSummary.history,
         },
         changeFailureRate: {
-          current: '11.4',
+          current: failureSummary.currentValue,
           unit: '%',
-          trend: { value: '2%', isPositive: true },
+          trend: failureSummary.trend,
           description: 'Percentage of deployments that result in failure or need rollback.',
+          history: failureSummary.history,
         },
         timeToRestore: {
-          current: '1.5',
+          current: restoreSummary.currentValue,
           unit: 'hours',
-          trend: { value: '8%', isPositive: false },
+          trend: restoreSummary.trend,
           description: 'Average time to recover from a production incident.',
+          history: restoreSummary.history,
         },
       });
       setError(null);
@@ -232,6 +242,16 @@ export const DashboardClient = () => {
             title="Lead Time Trend" 
             data={metrics.leadTime.history} 
             color="#8b5cf6" 
+          />
+          <MetricChart 
+            title="Change Failure Rate Trend" 
+            data={metrics.changeFailureRate.history} 
+            color="#f43f5e" 
+          />
+          <MetricChart 
+            title="Time to Restore Service Trend" 
+            data={metrics.timeToRestore.history} 
+            color="#10b981" 
           />
         </div>
 
