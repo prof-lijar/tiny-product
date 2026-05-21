@@ -1,10 +1,9 @@
 {
-  "cycle_reasoning": "Focus on reviewing and merging core authentication and metrics features while continuing project initialization.",
+  "cycle_reasoning": "Focus on completing the authentication backend and reviewing the frontend implementation.",
   "current_phase": "development",
   "assignments": [
     {"role": "qa", "turns": 2, "priority": "P0"},
-    {"role": "architect", "turns": 2, "priority": "P0"},
-    {"role": "frontend", "turns": 2, "priority": "P1"},
-    {"role": "backend", "turns": 2, "priority": "P1"}
+    {"role": "backend", "turns": 3, "priority": "P0"},
+    {"role": "architect", "turns": 1, "priority": "P1"}
   ]
 }

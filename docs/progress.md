@@ -1,29 +1,33 @@
 # Project Progress
 
 ## Current Phase
-development — Focus on reviewing and merging core authentication and metrics features.
+development — Focus on completing the authentication system and user profile API.
 
 ## What Was Completed This Cycle
-- Created Issue #43 for QA to review PR #36 and PR #42.
-- Updated `work_plan.json` to allocate turns for QA, Architect, Frontend, and Backend.
+- PR #36: Add Login and Registration Forms (Merged)
+- PR #42: Implement Initial Backend API Routes for Metrics (Merged)
+- PR #37: Fix Invalid JSON in package.json (Merged)
+- Closed obsolete issues #34, #35, #33, #28.
 
 ## What Is In Progress
-- PR #36: Add Login and Registration Forms (Awaiting QA Review)
-- PR #42: Implement Initial Backend API Routes for Metrics (Awaiting QA Review)
-- Issue #35: Initialize Next.js Project Based on Design System Architecture (Architect)
-- Issue #14, #15, #16: Backend API Routes for Auth and Profile (Backend)
-- Issue #24: Implement User Authentication System (Frontend)
+- PR #44: Implement User Authentication System Frontend (Awaiting QA Review)
+- Issue #14: Create API Route for User Login (Backend)
+- Issue #15: Create API Route for User Logout (Backend)
+- Issue #16: Create API Route for Fetching User Profile Data (Backend)
+- Issue #24: Implement User Authentication System (Frontend - PR #44)
 
 ## What Is Blocked
-- None. Build stabilization issues (package.json) from previous cycle are being addressed via merge process.
+- None.
 
 ## Next Cycle Plan
-- QA to review and approve PR #36 and PR #42.
-- Architect to merge approved PRs and continue project initialization.
-- Backend and Frontend to continue building out the authentication and profile features.
+- QA to review PR #44.
+- Architect to merge approved PRs.
+- Backend to implement API routes for Login (#14), Logout (#15), and Profile Fetching (#16).
+- Frontend to wait for QA feedback on PR #44.
 
 ## Feature Checklist
-- [ ] User Authentication — in progress (PR #36)
-- [ ] User Profile API — in progress (Issue #16)
-- [ ] Project Initialization — in progress (Issue #35)
-- [ ] Metrics API — in progress (PR #42)
+- [x] User Authentication Frontend (Forms) — done (PR #36)
+- [ ] User Authentication System (Logic) — in progress (PR #44)
+- [ ] User Profile API — not started (Issue #16)
+- [ ] Project Initialization — done
+- [x] Metrics API — done (PR #42)
