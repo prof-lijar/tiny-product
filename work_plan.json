@@ -1,10 +1,10 @@
 {
-  "cycle_reasoning": "Focus on stabilizing the build by resolving package.json issues (PR #37) and reviewing the authentication UI (PR #36), while continuing backend API development.",
+  "cycle_reasoning": "Prioritizing the fix for package.json (PR #37) to unblock the build, and reviewing Auth forms (PR #36) while continuing core feature development.",
   "current_phase": "development",
   "assignments": [
     {"role": "qa", "turns": 2, "priority": "P0"},
     {"role": "architect", "turns": 2, "priority": "P0"},
-    {"role": "frontend", "turns": 2, "priority": "P1"},
-    {"role": "backend", "turns": 2, "priority": "P1"}
+    {"role": "backend", "turns": 3, "priority": "P1"},
+    {"role": "frontend", "turns": 3, "priority": "P1"}
   ]
 }
