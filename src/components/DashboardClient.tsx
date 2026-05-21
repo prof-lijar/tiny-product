@@ -112,8 +112,6 @@ export const DashboardClient = () => {
           description: 'Time taken to implement a change and deliver it to production.',
           history: leadSummary.history,
         },
-        // These are still mocks for now as per current state, 
-        // but we'll keep them to maintain dashboard layout
         changeFailureRate: {
           current: '11.4',
           unit: '%',
