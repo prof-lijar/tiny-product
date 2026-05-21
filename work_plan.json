@@ -1,7 +1,1 @@
-{
-  "cycle_reasoning": "Starting the architecture phase to define system design and initialize the Next.js project.",
-  "current_phase": "architecture",
-  "assignments": [
-    {"role": "architect", "turns": 2, "priority": "P0-critical"}
-  ]
-}
+{"cycle_reasoning": "Define product vision and requirements for the initial phase of the project.", "current_phase": "discovery", "assignments": [{"role": "pm", "turns": 5, "priority": "P0-critical"}]}
