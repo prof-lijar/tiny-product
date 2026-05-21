@@ -5,6 +5,11 @@ import { DashboardSidebar } from '@/components/DashboardSidebar';
 import { MetricCard } from '@/components/ui/MetricCard';
 import { MetricChart } from '@/components/ui/MetricChart';
 
+interface MetricPoint {
+  timestamp: string;
+  value: number;
+}
+
 interface MetricData {
   name: string;
   value: number;
@@ -39,6 +44,36 @@ interface DashboardMetrics {
   };
 }
 
+const calculateMetricSummary = (points: MetricPoint[]) => {
+  if (!points || points.length === 0) {
+    return {
+      currentValue: '0',
+      trend: { value: '0%', isPositive: false },
+      history: [],
+    };
+  }
+
+  const currentVal = points[points.length - 1].value;
+  const prevVal = points.length > 1 ? points[points.length - 2].value : currentVal;
+  
+  const diff = currentVal - prevVal;
+  const percentChange = prevVal !== 0 ? (diff / prevVal) * 100 : 0;
+  
+  const history = points.map(p => ({
+    name: new Date(p.timestamp).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+    value: p.value,
+  }));
+
+  return {
+    currentValue: currentVal.toFixed(1),
+    trend: {
+      value: `${Math.abs(percentChange).toFixed(1)}%`,
+      isPositive: diff > 0,
+    },
+    history,
+  };
+};
+
 export const DashboardClient = () => {
   const [metrics, setMetrics] = useState<DashboardMetrics | null>(null);
   const [loading, setLoading] = useState(true);
@@ -56,23 +91,26 @@ export const DashboardClient = () => {
         throw new Error('Failed to fetch metrics data');
       }
 
-      const cycleData = await cycleRes.json();
-      const leadData = await leadRes.json();
+      const cycleResponse = await cycleRes.json();
+      const leadResponse = await leadRes.json();
+
+      const cycleSummary = calculateMetricSummary(cycleResponse.data || []);
+      const leadSummary = calculateMetricSummary(leadResponse.data || []);
 
       setMetrics({
         cycleTime: {
-          current: cycleData.currentValue,
+          current: cycleSummary.currentValue,
           unit: 'days',
-          trend: cycleData.trend,
+          trend: cycleSummary.trend,
           description: 'Average time from first commit to production deployment.',
-          history: cycleData.history,
+          history: cycleSummary.history,
         },
         leadTime: {
-          current: leadData.currentValue,
+          current: leadSummary.currentValue,
           unit: 'days',
-          trend: leadData.trend,
+          trend: leadSummary.trend,
           description: 'Time taken to implement a change and deliver it to production.',
-          history: leadData.history,
+          history: leadSummary.history,
         },
         // These are still mocks for now as per current state, 
         // but we'll keep them to maintain dashboard layout
