@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { authApi } from '@/lib/auth';
+import { authApi, setAuthToken } from '@/lib/auth';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -16,7 +16,8 @@ const LoginForm = () => {
     setError('');
     setLoading(true);
     try {
-      await authApi.login({ email, password });
+      const data = await authApi.login({ email, password });
+      setAuthToken(data.token);
       router.push('/dashboard');
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'An unexpected error occurred');

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { authApi } from '@/lib/auth';
+import { authApi, setAuthToken } from '@/lib/auth';
 
 const RegisterForm = () => {
   const [email, setEmail] = useState('');
@@ -25,9 +25,10 @@ const RegisterForm = () => {
 
     setLoading(true);
     try {
-      await authApi.register({ email, password });
+      const data = await authApi.register({ email, password });
+      setAuthToken(data.token);
       setSuccess(true);
-      router.push('/auth/login?message=Registration successful. Please login.');
+      router.push('/dashboard');
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'An unexpected error occurred');
     } finally {
