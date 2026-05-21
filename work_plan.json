@@ -1,10 +1,10 @@
 {
-  "cycle_reasoning": "Critical priority is unblocking the build by fixing package.json (PR #37) and reviewing auth forms (PR #36). Concurrent work on Auth API and UI logic continues.",
+  "cycle_reasoning": "Focus on reviewing and merging core authentication and metrics features while continuing project initialization.",
   "current_phase": "development",
   "assignments": [
     {"role": "qa", "turns": 2, "priority": "P0"},
     {"role": "architect", "turns": 2, "priority": "P0"},
-    {"role": "backend", "turns": 3, "priority": "P1"},
-    {"role": "frontend", "turns": 3, "priority": "P1"}
+    {"role": "frontend", "turns": 2, "priority": "P1"},
+    {"role": "backend", "turns": 2, "priority": "P1"}
   ]
 }
