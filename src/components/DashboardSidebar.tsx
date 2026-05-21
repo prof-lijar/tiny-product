@@ -1,5 +1,9 @@
+'use client'
+
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { authApi, removeAuthToken } from '@/lib/auth';
 
 interface SidebarItemProps {
   label: string;
@@ -25,6 +29,19 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ label, href, icon, active }) 
 };
 
 export const DashboardSidebar: React.FC = () => {
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    try {
+      await authApi.logout();
+    } catch (err) {
+      console.error('Logout failed:', err);
+    } finally {
+      removeAuthToken();
+      router.push('/auth/login');
+    }
+  };
+
   const menuItems = [
     { label: 'Overview', href: '/dashboard', active: true },
     { label: 'Cycle Time', href: '/dashboard/cycle-time' },
@@ -54,8 +71,18 @@ export const DashboardSidebar: React.FC = () => {
       </nav>
 
       <div className="mt-auto p-3 bg-slate-900 rounded-xl border border-slate-800">
-        <p className="text-xs text-slate-500 mb-2">Logged in as</p>
-        <p className="text-sm text-slate-300 font-medium truncate">developer@devpulse.io</p>
+        <div className="flex flex-col gap-2">
+          <div>
+            <p className="text-xs text-slate-500 mb-1">Logged in as</p>
+            <p className="text-sm text-slate-300 font-medium truncate">developer@devpulse.io</p>
+          </div>
+          <button 
+            onClick={handleLogout}
+            className="w-full text-left text-sm text-red-400 hover:text-red-300 font-medium transition-colors py-1"
+          >
+            Logout
+          </button>
+        </div>
       </div>
     </aside>
   );
