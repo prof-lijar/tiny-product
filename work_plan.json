@@ -1,8 +1,8 @@
 {
-  "cycle_reasoning": "Defined initial features for the Next.js application, focusing on user authentication and profile management.",
-  "current_phase": "development",
+  "cycle_reasoning": "There are open PRs needing review and no specific PM tasks identified, hence focusing on QA for reviewing PRs and Architect for merging approved ones.",
+  "current_phase": "quality",
   "assignments": [
-    {"role": "frontend", "turns": 3, "priority": "P0-critical"},
-    {"role": "backend", "turns": 2, "priority": "P0-critical"}
+    {"role": "architect", "turns": 1, "priority": "P0-critical"},
+    {"role": "qa", "turns": 2, "priority": "P0-critical"}
   ]
 }
