@@ -1,7 +1,7 @@
 {
-  "cycle_reasoning": "Initial project setup: created vision and product spec",
-  "current_phase": "discovery",
+  "cycle_reasoning": "Project initialization is critical to start development. Assigning the architect to set up the project.",
+  "current_phase": "architecture",
   "assignments": [
-    {"role": "pm", "turns": 0, "priority": "P0-critical"}
+    {"role": "architect", "turns": 2, "priority": "P0-critical"}
   ]
 }

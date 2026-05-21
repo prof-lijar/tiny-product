@@ -1,10 +1,10 @@
-# Vision Document for Developer Dashboard
+# Vision Document for Next.js Portfolio Generator App
 
 ## Product Idea
-A developer dashboard that provides an overview of AI software engineering tasks.
+A modern, dynamic, and responsive portfolio generator app built with Next.js that allows developers to showcase their work effectively.
 
 ## Target Users
-Developers and engineers who need to monitor their projects, track progress, and manage tasks efficiently.
+Developers and design professionals who need a customizable platform to create professional online portfolios quickly and easily.
 
 ## Value Proposition
-Streamline project management and increase productivity through real-time insights.
+Streamline the process of creating a visually appealing and functional portfolio with minimal effort, allowing users to focus on showcasing their skills and projects.
