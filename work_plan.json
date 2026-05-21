@@ -1,10 +1,7 @@
 {
-  "cycle_reasoning": "Implementing the Customizable Dashboards feature based on the new architecture design. Backend will build the config API and Frontend will build the draggable UI.",
-  "current_phase": "development",
+  "cycle_reasoning": "Product pivot to TriageAI. Architecture phase: Architect designs system and initializes Next.js project.",
+  "current_phase": "architecture",
   "assignments": [
-    {"role": "backend", "turns": 3, "priority": "P0"},
-    {"role": "frontend", "turns": 3, "priority": "P0"},
-    {"role": "architect", "turns": 1, "priority": "P1"},
-    {"role": "qa", "turns": 2, "priority": "P1"}
+    {"role": "architect", "turns": 2, "priority": "P0"}
   ]
 }

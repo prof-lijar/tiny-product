@@ -1,36 +1,26 @@
 # Project Progress
 
 ## Current Phase
-development — Implementing Customizable Dashboards.
+architecture — New product: TriageAI (Symptom Checker & Triage). Ready for architecture and project init.
 
 ## What Was Completed This Cycle
-- Closed Issue #66: Design Customizable Dashboard Configuration and Storage (documented in `docs/architecture.md`).
+- Product pivot from Developer Productivity Dashboard to TriageAI
+- Vision and product spec written
 
 ## What Is In Progress
-- Issue #67: Implement API Endpoints for Customizable Dashboard Configuration (role:backend)
-- Issue #68: Implement Customizable Dashboard UI and Layout Management (role:frontend)
+- Nothing — awaiting architecture design and project setup
 
 ## What Is Blocked
 - None.
 
 ## Next Cycle Plan
-- Backend to implement the config API.
-- Frontend to implement the draggable layout and edit mode.
-- QA to review the implementation of these features.
+- Architect designs system and initializes Next.js project
 
 ## Feature Checklist
-- [x] User Authentication Frontend (Forms) — done
-- [x] User Authentication System (Logic/UI) — done
-- [x] User Authentication API (Backend) — done
-- [x] User Profile API — done
-- [x] Main Dashboard UI — done
-- [x] Project Initialization — done
-- [x] Metrics API (Initial) — done
-- [x] Cycle Time Tracking — done
-- [x] Lead Time for Changes — done
-- [x] Change Failure Rate — done
-- [x] Time to Restore Service — done
-- [x] Work Distribution Analysis — done
-- [ ] Customizable Dashboards — in progress (Issues #67, #68)
-- [ ] Real-Time Data Updates — not started
-- [ ] Integration with Development Tools — not started
+- [ ] Symptom Input (body map + search) — not started
+- [ ] Urgency Triage Assessment — not started
+- [ ] Possible Conditions display — not started
+- [ ] Action Guide & Next Steps — not started
+- [ ] Health Profile (localStorage) — not started
+- [ ] Symptom History — not started
+- [ ] Nearby Care Finder — not started
