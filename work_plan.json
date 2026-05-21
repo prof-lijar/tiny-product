@@ -1,8 +1,7 @@
 {
-  "cycle_reasoning": "Initialize the Next.js project and start developing AI-powered features.",
-  "current_phase": "architecture",
+  "cycle_reasoning": "Initial project setup: created vision and product spec",
+  "current_phase": "discovery",
   "assignments": [
-    {"role": "architect", "turns": 2, "priority": "P0"},
-    {"role": "frontend", "turns": 3, "priority": "P1"}
+    {"role": "pm", "turns": 0, "priority": "P0-critical"}
   ]
 }
