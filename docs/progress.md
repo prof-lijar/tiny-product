@@ -1,21 +1,19 @@
 # Project Progress
 
 ## Current Phase
-discovery — Product vision and spec are being drafted.
+discovery — Defining product vision and requirements
 
 ## What Was Completed This Cycle
-- Documented product vision in docs/vision.md
-- Drafted initial product requirements in docs/product-spec.md
+- No issues were completed in this initial cycle.
 
 ## What Is In Progress
-- None
+- Issue #1: Define Product Vision and Requirements (role:pm)
 
 ## What Is Blocked
 - None
 
 ## Next Cycle Plan
-- No further action needed this cycle; PM will continue monitoring progress.
+- PM will complete the product vision and requirements document.
 
 ## Feature Checklist
-- [x] Research and Document Product Vision — done (Issue #27)
-- [ ] Initialize Next.js project — not started
+- [ ] Feature 1 — not started
