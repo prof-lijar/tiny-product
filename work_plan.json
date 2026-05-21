@@ -1,1 +1,8 @@
-{"cycle_reasoning": "Define product vision and requirements for the initial phase of the project.", "current_phase": "discovery", "assignments": [{"role": "pm", "turns": 5, "priority": "P0-critical"}]}
+{
+  "cycle_reasoning": "There are open PRs that need review and merging, so QA and Architect should focus on these tasks.",
+  "current_phase": "development",
+  "assignments": [
+    {"role": "architect", "turns": 2, "priority": "P0-critical"},
+    {"role": "qa", "turns": 2, "priority": "P0-critical"}
+  ]
+}
