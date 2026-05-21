@@ -1,0 +1,8 @@
+{
+  "cycle_reasoning": "Define product vision, architecture, and initial deployment setup.",
+  "current_phase": "discovery",
+  "assignments": [
+    {"role": "architect", "turns": 2, "priority": "P0"},
+    {"role": "devops", "turns": 1, "priority": "P0"}
+  ]
+}
