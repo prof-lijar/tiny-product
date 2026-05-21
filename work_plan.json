@@ -1,10 +1,10 @@
 {
-  "cycle_reasoning": "Prioritizing review of open PRs (#36, #37) and continuing development of core authentication and API features.",
+  "cycle_reasoning": "Prioritize reviewing and merging open PRs (#36, #37) while continuing the implementation of the Authentication system and Backend API routes.",
   "current_phase": "development",
   "assignments": [
     {"role": "qa", "turns": 2, "priority": "P0"},
     {"role": "architect", "turns": 2, "priority": "P0"},
-    {"role": "frontend", "turns": 3, "priority": "P1"},
-    {"role": "backend", "turns": 3, "priority": "P1"}
+    {"role": "frontend", "turns": 3, "priority": "P0"},
+    {"role": "backend", "turns": 2, "priority": "P1"}
   ]
 }

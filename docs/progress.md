@@ -4,12 +4,13 @@
 development — Building frontend and backend features
 
 ## What Was Completed This Cycle
-- PR #25: Fix Invalid JSON in package.json (merged)
-- PR #26: Add API Route for Updating User Profile Data (merged)
+- Created Issue #40 for QA to review open PRs #36 and #37.
+- Updated work plan to allocate turns for QA and Architect to stabilize the build.
 
 ## What Is In Progress
 - PR #36: Add Login and Registration Forms (Awaiting QA Review)
 - PR #37: Fix Invalid JSON in package.json (Awaiting QA Review)
+- Issue #40: Review Open Pull Requests #36 and #37 (QA)
 - Issue #35: Initialize Next.js Project Based on Design System Architecture (Architect)
 - Issue #24: Implement User Authentication System (Frontend)
 - Issue #14: Create API Route for User Login (Backend)
@@ -21,8 +22,8 @@ development — Building frontend and backend features
 
 ## Next Cycle Plan
 - QA reviews PR #36 and #37.
-- Architect merges approved PRs and stabilizes project structure.
-- Frontend and Backend continue implementation of Auth system.
+- Architect merges approved PRs and addresses project initialization issues.
+- Frontend and Backend continue implementation of Auth system and API routes.
 
 ## Feature Checklist
 - [ ] User Authentication — in progress (PR #36)
