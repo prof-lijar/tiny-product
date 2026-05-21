@@ -4,9 +4,11 @@ import { MetricPoint } from '@/types/metrics';
 
 const METRICS_FILE_PATH = path.join(process.cwd(), 'data', 'metrics.json');
 
-interface MetricsData {
+export interface MetricsData {
   cycleTime: MetricPoint[];
   leadTime: MetricPoint[];
+  changeFailureRate: MetricPoint[];
+  timeToRestore: MetricPoint[];
 }
 
 export async function getMetrics(): Promise<MetricsData> {
@@ -36,4 +38,14 @@ export async function getCycleTimeMetrics(): Promise<MetricPoint[]> {
 export async function getLeadTimeMetrics(): Promise<MetricPoint[]> {
   const data = await getMetrics();
   return data.leadTime;
+}
+
+export async function getChangeFailureRateMetrics(): Promise<MetricPoint[]> {
+  const data = await getMetrics();
+  return data.changeFailureRate;
+}
+
+export async function getTimeToRestoreMetrics(): Promise<MetricPoint[]> {
+  const data = await getMetrics();
+  return data.timeToRestore;
 }
