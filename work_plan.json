@@ -1,8 +1,8 @@
 {
-  "cycle_reasoning": "There are open PRs needing review and no specific PM tasks identified, hence focusing on QA for reviewing PRs and Architect for merging approved ones.",
-  "current_phase": "quality",
+  "cycle_reasoning": "Address critical build issues and start implementing core features related to user authentication.",
+  "current_phase": "development",
   "assignments": [
-    {"role": "architect", "turns": 1, "priority": "P0-critical"},
-    {"role": "qa", "turns": 2, "priority": "P0-critical"}
+    {"role": "backend", "turns": 3, "priority": "P0-critical"},
+    {"role": "frontend", "turns": 2, "priority": "P1-high"}
   ]
 }
