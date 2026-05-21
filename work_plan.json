@@ -1,8 +1,7 @@
 {
-    "cycle_reasoning": "Open PRs require review by QA and potential merging by the Architect.",
-    "current_phase": "development",
-    "assignments": [
-        {"role": "qa", "turns": 2, "priority": "P0-critical"},
-        {"role": "architect", "turns": 1, "priority": "P0-critical"}
-    ]
+  "cycle_reasoning": "Starting the architecture phase to define system design and initialize the Next.js project.",
+  "current_phase": "architecture",
+  "assignments": [
+    {"role": "architect", "turns": 2, "priority": "P0-critical"}
+  ]
 }
