@@ -1,10 +1,10 @@
 {
-  "cycle_reasoning": "Frontend is moving to the core dashboard UI while Backend catches up on the authentication API routes to make the auth system functional.",
+  "cycle_reasoning": "Complete the authentication backend and integrate it with the frontend to enable a working user flow.",
   "current_phase": "development",
   "assignments": [
     {"role": "backend", "turns": 3, "priority": "P0"},
     {"role": "frontend", "turns": 3, "priority": "P0"},
-    {"role": "qa", "turns": 1, "priority": "P1"},
+    {"role": "qa", "turns": 2, "priority": "P1"},
     {"role": "architect", "turns": 1, "priority": "P1"}
   ]
 }
