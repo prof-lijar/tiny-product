@@ -1,10 +1,10 @@
 {
-  "cycle_reasoning": "Moving from auth integration to core feature development: implementing and visualizing the primary productivity metrics (Cycle Time and Lead Time).",
+  "cycle_reasoning": "Reviewing the Cycle/Lead Time visualization and starting the implementation of the remaining DORA metrics (Change Failure Rate and Time to Restore Service).",
   "current_phase": "development",
   "assignments": [
+    {"role": "qa", "turns": 2, "priority": "P0"},
     {"role": "backend", "turns": 3, "priority": "P0"},
     {"role": "frontend", "turns": 3, "priority": "P0"},
-    {"role": "qa", "turns": 2, "priority": "P1"},
-    {"role": "architect", "turns": 1, "priority": "P2"}
+    {"role": "architect", "turns": 1, "priority": "P1"}
   ]
 }
