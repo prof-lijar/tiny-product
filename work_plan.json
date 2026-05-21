@@ -1,11 +1,10 @@
 {
-  "cycle_reasoning": "Moving into the Customizable Dashboards phase. The Architect must first design the configuration schema and storage strategy before development can begin.",
+  "cycle_reasoning": "Implementing the Customizable Dashboards feature based on the new architecture design. Backend will build the config API and Frontend will build the draggable UI.",
   "current_phase": "development",
   "assignments": [
-    {
-      "role": "architect",
-      "turns": 2,
-      "priority": "P0"
-    }
+    {"role": "backend", "turns": 3, "priority": "P0"},
+    {"role": "frontend", "turns": 3, "priority": "P0"},
+    {"role": "architect", "turns": 1, "priority": "P1"},
+    {"role": "qa", "turns": 2, "priority": "P1"}
   ]
 }
