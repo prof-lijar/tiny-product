@@ -1,6 +1,7 @@
 import React from 'react';
 import { DashboardSidebar } from '@/components/DashboardSidebar';
 import { MetricCard } from '@/components/ui/MetricCard';
+import { WorkDistributionChart } from '@/components/WorkDistributionChart';
 
 const MOCK_METRICS = [
   {
@@ -62,32 +63,39 @@ export default function DashboardPage() {
           ))}
         </div>
 
-        <section className="bg-slate-900 border border-slate-800 rounded-xl p-6">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-xl font-semibold text-white">Recent Activity</h2>
-            <button className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
-              View All
-            </button>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          <div className="lg:col-span-2">
+            <WorkDistributionChart title="Work Distribution Analysis" />
           </div>
-          <div className="space-y-4">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="flex items-center justify-between p-4 rounded-lg bg-slate-800/50 border border-slate-700/50">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-medium">
-                    U{i}
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-white">Deployment to production successful</p>
-                    <p className="text-xs text-slate-500">2 hours ago</p>
-                  </div>
-                </div>
-                <span className="text-xs font-medium px-2 py-1 rounded-full bg-slate-700 text-slate-300">
-                  Production
-                </span>
+          <div className="lg:col-span-1">
+            <section className="bg-slate-900 border border-slate-800 rounded-xl p-6 h-full">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-xl font-semibold text-white">Recent Activity</h2>
+                <button className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
+                  View All
+                </button>
               </div>
-            ))}
+              <div className="space-y-4">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="flex items-center justify-between p-4 rounded-lg bg-slate-800/50 border border-slate-700/50">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-medium">
+                        U{i}
+                      </div>
+                      <div className="text-sm">
+                        <p className="text-sm font-medium text-white">Deployment to production successful</p>
+                        <p className="text-xs text-slate-500">2 hours ago</p>
+                      </div>
+                    </div>
+                    <span className="text-xs font-medium px-2 py-1 rounded-full bg-slate-700 text-slate-300">
+                      Production
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </section>
           </div>
-        </section>
+        </div>
       </main>
     </div>
   );
