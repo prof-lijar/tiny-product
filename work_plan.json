@@ -1,8 +1,8 @@
 {
-  "cycle_reasoning": "Develop initial UI components for the landing page and backend API routes for user authentication.",
-  "current_phase": "development",
+  "cycle_reasoning": "PRs need review and merge to ensure quality and progress in feature implementation.",
+  "current_phase": "quality",
   "assignments": [
-    {"role": "frontend", "turns": 3, "priority": "P0"},
-    {"role": "backend", "turns": 2, "priority": "P0"}
+    {"role": "qa", "turns": 2, "priority": "P0"},
+    {"role": "architect", "turns": 1, "priority": "P0"}
   ]
 }
